@@ -164,7 +164,7 @@ class _WorldMapScreenState extends ConsumerState<WorldMapScreen>
           const SizedBox(width: 12),
           Expanded(
             child: Text(
-              'Word Key Quest',
+              'Vocoro',
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

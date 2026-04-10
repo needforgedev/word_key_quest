@@ -49,7 +49,7 @@ class _MeaningTapScreenState extends ConsumerState<MeaningTapScreen> {
                   ),
                   Expanded(
                     child: Text(
-                      'Word Key Quest',
+                      'Vocoro',
                       style: GoogleFonts.plusJakartaSans(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

@@ -6,11 +6,11 @@ import 'application/theme_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const ProviderScope(child: WordKeyQuestApp()));
+  runApp(const ProviderScope(child: VocoroApp()));
 }
 
-class WordKeyQuestApp extends ConsumerWidget {
-  const WordKeyQuestApp({super.key});
+class VocoroApp extends ConsumerWidget {
+  const VocoroApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +22,7 @@ class WordKeyQuestApp extends ConsumerWidget {
     final themeData = ref.watch(themeDataProvider);
 
     return MaterialApp.router(
-      title: 'Word Key Quest',
+      title: 'Vocoro',
       theme: themeData,
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,

@@ -43,7 +43,7 @@ class _SentenceFixScreenState extends ConsumerState<SentenceFixScreen> {
                   ),
                   Expanded(
                     child: Text(
-                      'Word Key Quest',
+                      'Vocoro',
                       style: GoogleFonts.plusJakartaSans(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

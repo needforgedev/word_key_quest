@@ -1,11 +1,11 @@
 {
-    "name": "word_key_quest",
-    "short_name": "word_key_quest",
+    "name": "Vocoro",
+    "short_name": "Vocoro",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Vocoro - A vocabulary adventure game for children.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

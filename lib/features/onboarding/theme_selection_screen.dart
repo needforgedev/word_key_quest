@@ -120,7 +120,7 @@ class _ThemeSelectionScreenState extends ConsumerState<ThemeSelectionScreen> {
             icon: Icon(Icons.arrow_back, color: AppTheme.primary),
           ),
           Text(
-            'Word Key Quest',
+            'Vocoro',
             style: GoogleFonts.plusJakartaSans(
               fontSize: 18,
               fontWeight: FontWeight.w700,

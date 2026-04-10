@@ -1,5 +1,5 @@
 name: word_key_quest
-description: "A new Flutter project."
+description: "Vocoro - A vocabulary adventure game for children."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -53,6 +53,7 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
   crypto: ^3.0.7
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -98,3 +99,20 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/vocoro_app_icon.png"
+  adaptive_icon_background: "#0F1B2D"
+  adaptive_icon_foreground: "assets/images/vocoro_app_icon.png"
+  web:
+    generate: true
+    image_path: "assets/images/vocoro_app_icon.png"
+  windows:
+    generate: true
+    image_path: "assets/images/vocoro_app_icon.png"
+  macos:
+    generate: true
+    image_path: "assets/images/vocoro_app_icon.png"

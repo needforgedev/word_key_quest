@@ -135,7 +135,7 @@ class _LevelCompleteScreenState extends ConsumerState<LevelCompleteScreen> {
         children: [
           Expanded(
             child: Text(
-              'Word Key Quest',
+              'Vocoro',
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

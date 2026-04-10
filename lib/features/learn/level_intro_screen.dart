@@ -81,7 +81,7 @@ class LevelIntroScreen extends ConsumerWidget {
           SizedBox(width: 12),
           Expanded(
             child: Text(
-              'Word Key Quest',
+              'Vocoro',
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -176,12 +176,12 @@ class LevelIntroScreen extends ConsumerWidget {
         child: Padding(
           padding: EdgeInsets.all(8),
           child: Image.asset(
-            'assets/images/image_98eb4a64.jpg',
+            'assets/images/vocoro_mascot.png',
             fit: BoxFit.cover,
             errorBuilder: (_, e, s) => Icon(
               Icons.emoji_nature_rounded,
               color: AppTheme.primaryContainer,
-              size: 48,
+              size: 54,
             ),
           ),
         ),

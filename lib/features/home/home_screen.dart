@@ -192,7 +192,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> with TickerProviderStat
           // App name
           Expanded(
             child: Text(
-              'Word Key Quest',
+              'Vocoro',
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

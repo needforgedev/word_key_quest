@@ -2,7 +2,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
 import '../models/models.dart';
 
-/// Central SQLite database service for Word Key Quest.
+/// Central SQLite database service for Vocoro.
 ///
 /// Tables:
 ///   - words          (seeded, immutable content)
@@ -14,7 +14,7 @@ import '../models/models.dart';
 ///   - reward_progress(per-reward unlock/equip state, mutable)
 ///   - daily_quests   (daily review sessions, mutable)
 class DatabaseService {
-  static const _dbName = 'word_key_quest.db';
+  static const _dbName = 'vocoro.db';
   static const _dbVersion = 1;
 
   Database? _db;

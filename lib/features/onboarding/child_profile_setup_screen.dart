@@ -112,7 +112,7 @@ class _ChildProfileSetupScreenState
           ),
           SizedBox(width: 8),
           Text(
-            'Word Key Quest',
+            'Vocoro',
             style: GoogleFonts.plusJakartaSans(
               fontSize: 20,
               fontWeight: FontWeight.w700,

@@ -134,16 +134,18 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
             delay: 4,
           ),
 
-          // Decorative corner: book icon top-left
+          // Decorative corner: Vocoro monogram top-left
           Positioned(
             top: 40,
             left: 24,
             child: Opacity(
-              opacity: 0.2,
-              child: Icon(
-                Icons.auto_stories,
-                size: 48,
-                color: AppTheme.primary,
+              opacity: 0.3,
+              child: Image.asset(
+                'assets/images/vocoro_monogram.png',
+                width: 48,
+                height: 48,
+                errorBuilder: (context, error, stackTrace) =>
+                    const SizedBox.shrink(),
               ),
             ),
           ),
@@ -162,7 +164,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
 
                 // App title
                 Text(
-                  'Word Key\nQuest',
+                  'Vocoro',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.plusJakartaSans(
                     fontSize: 48,
@@ -220,8 +222,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
             animation: _pulseController,
             builder: (context, child) {
               return Container(
-                width: 180,
-                height: 180,
+                width: 200,
+                height: 200,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   boxShadow: [
@@ -236,53 +238,13 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               );
             },
           ),
-          // White circle with key
-          Container(
-            width: 160,
-            height: 160,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-              border: Border.all(
-                color: AppTheme.secondaryContainer.withValues(alpha: 0.2),
-                width: 4,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0x26322F22),
-                  blurRadius: 32,
-                  offset: Offset(0, 12),
-                ),
-              ],
-            ),
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Icon(
-                  Icons.vpn_key_rounded,
-                  size: 80,
-                  color: AppTheme.secondaryContainer,
-                ),
-                // Spinning star on key
-                Positioned(
-                  top: 52,
-                  child: AnimatedBuilder(
-                    animation: _spinController,
-                    builder: (context, child) {
-                      return Transform.rotate(
-                        angle: _spinController.value * 2 * pi,
-                        child: child,
-                      );
-                    },
-                    child: Icon(
-                      Icons.stars_rounded,
-                      size: 28,
-                      color: const Color(0xFF443100),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+          // Vocoro mascot
+          Image.asset(
+            'assets/images/vocoro_mascot.png',
+            width: 180,
+            height: 180,
+            errorBuilder: (context, error, stackTrace) =>
+                const SizedBox.shrink(),
           ),
         ],
       ),

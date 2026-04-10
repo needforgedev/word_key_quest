@@ -104,7 +104,7 @@ class MemoryKeyFocusScreen extends ConsumerWidget {
           ),
           Expanded(
             child: Text(
-              'Word Key Quest',
+              'Vocoro',
               style: GoogleFonts.plusJakartaSans(
                 fontSize: 18,
                 fontWeight: FontWeight.w700,

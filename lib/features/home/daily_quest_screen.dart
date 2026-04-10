@@ -78,7 +78,7 @@ class DailyQuestScreen extends ConsumerWidget {
           ),
           SizedBox(width: 8),
           Text(
-            'Word Key Quest',
+            'Vocoro',
             style: GoogleFonts.plusJakartaSans(
               fontSize: 18,
               fontWeight: FontWeight.bold,
