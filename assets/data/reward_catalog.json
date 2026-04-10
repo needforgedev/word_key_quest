@@ -1,0 +1,922 @@
+[
+  {
+    "id": "reward_1",
+    "name": "Golden Shield",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_1",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_2",
+    "name": "Silver Star",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_2",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_3",
+    "name": "Crystal Dragon",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_3",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_4",
+    "name": "Emerald Boots",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_4",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_5",
+    "name": "Ruby Tapestry",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_5",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_6",
+    "name": "Starlit Shield",
+    "type": "badge",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_6",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_7",
+    "name": "Ancient Crest",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_7",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_8",
+    "name": "Mystic Charm",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_8",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_9",
+    "name": "Royal Phoenix",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_9",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_10",
+    "name": "Enchanted Cloak",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_10",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_11",
+    "name": "Blazing Lamp",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_11",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_12",
+    "name": "Frozen Crest",
+    "type": "badge",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_12",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_13",
+    "name": "Shadow Emblem",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_13",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_14",
+    "name": "Radiant Glyph",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_14",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_15",
+    "name": "Celestial Griffin",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_15",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_16",
+    "name": "Thunder Cape",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_16",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_17",
+    "name": "Coral Banner",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_17",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_18",
+    "name": "Amber Emblem",
+    "type": "badge",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_18",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_19",
+    "name": "Sapphire Medal",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_19",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_20",
+    "name": "Moonlit Rune",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_20",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_21",
+    "name": "Iron Fox",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_21",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_22",
+    "name": "Velvet Crown",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_22",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_23",
+    "name": "Crimson Throne",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_23",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_24",
+    "name": "Jade Medal",
+    "type": "badge",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_24",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_25",
+    "name": "Obsidian Seal",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_25",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_26",
+    "name": "Prism Gem",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_26",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_27",
+    "name": "Storm Owl",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_27",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_28",
+    "name": "Dawn Armor",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_28",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_29",
+    "name": "Twilight Bookshelf",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_29",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_30",
+    "name": "Ethereal Seal",
+    "type": "badge",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_30",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_31",
+    "name": "Luminous Shield",
+    "type": "badge",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_31",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_32",
+    "name": "Gilded Star",
+    "type": "sticker",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_32",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_33",
+    "name": "Phantom Dragon",
+    "type": "pet",
+    "category": "Explorer Quest",
+    "unlockRule": "complete_world_33",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_34",
+    "name": "Verdant Boots",
+    "type": "outfit",
+    "category": "Sky Heroes",
+    "unlockRule": "complete_world_34",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_35",
+    "name": "Final Tapestry",
+    "type": "room_prop",
+    "category": "Enchanted Kingdom",
+    "unlockRule": "complete_world_35",
+    "rarity": "common"
+  },
+  {
+    "id": "reward_36",
+    "name": "Boss Key 1-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_5",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_37",
+    "name": "Boss Key 1-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_10",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_38",
+    "name": "Boss Key 2-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_15",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_39",
+    "name": "Boss Key 2-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_20",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_40",
+    "name": "Boss Key 3-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_25",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_41",
+    "name": "Boss Key 3-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_30",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_42",
+    "name": "Boss Key 4-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_35",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_43",
+    "name": "Boss Key 4-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_40",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_44",
+    "name": "Boss Key 5-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_45",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_45",
+    "name": "Boss Key 5-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_50",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_46",
+    "name": "Boss Key 6-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_55",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_47",
+    "name": "Boss Key 6-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_60",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_48",
+    "name": "Boss Key 7-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_65",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_49",
+    "name": "Boss Key 7-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_70",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_50",
+    "name": "Boss Key 8-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_75",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_51",
+    "name": "Boss Key 8-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_80",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_52",
+    "name": "Boss Key 9-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_85",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_53",
+    "name": "Boss Key 9-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_90",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_54",
+    "name": "Boss Key 10-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_95",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_55",
+    "name": "Boss Key 10-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_100",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_56",
+    "name": "Boss Key 11-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_105",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_57",
+    "name": "Boss Key 11-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_110",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_58",
+    "name": "Boss Key 12-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_115",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_59",
+    "name": "Boss Key 12-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_120",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_60",
+    "name": "Boss Key 13-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_125",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_61",
+    "name": "Boss Key 13-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_130",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_62",
+    "name": "Boss Key 14-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_135",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_63",
+    "name": "Boss Key 14-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_140",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_64",
+    "name": "Boss Key 15-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_145",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_65",
+    "name": "Boss Key 15-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_150",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_66",
+    "name": "Boss Key 16-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_155",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_67",
+    "name": "Boss Key 16-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_160",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_68",
+    "name": "Boss Key 17-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_165",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_69",
+    "name": "Boss Key 17-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_170",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_70",
+    "name": "Boss Key 18-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_175",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_71",
+    "name": "Boss Key 18-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_180",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_72",
+    "name": "Boss Key 19-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_185",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_73",
+    "name": "Boss Key 19-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_190",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_74",
+    "name": "Boss Key 20-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_195",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_75",
+    "name": "Boss Key 20-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_200",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_76",
+    "name": "Boss Key 21-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_205",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_77",
+    "name": "Boss Key 21-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_210",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_78",
+    "name": "Boss Key 22-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_215",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_79",
+    "name": "Boss Key 22-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_220",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_80",
+    "name": "Boss Key 23-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_225",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_81",
+    "name": "Boss Key 23-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_230",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_82",
+    "name": "Boss Key 24-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_235",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_83",
+    "name": "Boss Key 24-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_240",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_84",
+    "name": "Boss Key 25-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_245",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_85",
+    "name": "Boss Key 25-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_250",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_86",
+    "name": "Boss Key 26-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_255",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_87",
+    "name": "Boss Key 26-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_260",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_88",
+    "name": "Boss Key 27-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_265",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_89",
+    "name": "Boss Key 27-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_270",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_90",
+    "name": "Boss Key 28-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_275",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_91",
+    "name": "Boss Key 28-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_280",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_92",
+    "name": "Boss Key 29-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_285",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_93",
+    "name": "Boss Key 29-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_290",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_94",
+    "name": "Boss Key 30-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_295",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_95",
+    "name": "Boss Key 30-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_300",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_96",
+    "name": "Boss Key 31-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_305",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_97",
+    "name": "Boss Key 31-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_310",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_98",
+    "name": "Boss Key 32-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_315",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_99",
+    "name": "Boss Key 32-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_320",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_100",
+    "name": "Boss Key 33-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_325",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_101",
+    "name": "Boss Key 33-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_330",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_102",
+    "name": "Boss Key 34-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_335",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_103",
+    "name": "Boss Key 34-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_340",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_104",
+    "name": "Boss Key 35-5",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_345",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_105",
+    "name": "Boss Key 35-10",
+    "type": "key",
+    "category": "campaign",
+    "unlockRule": "complete_level_350",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_106",
+    "name": "50 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_50",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_107",
+    "name": "100 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_100",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_108",
+    "name": "250 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_250",
+    "rarity": "uncommon"
+  },
+  {
+    "id": "reward_109",
+    "name": "500 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_500",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_110",
+    "name": "1000 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_1000",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_111",
+    "name": "1500 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_1500",
+    "rarity": "rare"
+  },
+  {
+    "id": "reward_112",
+    "name": "2000 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_2000",
+    "rarity": "legendary"
+  },
+  {
+    "id": "reward_113",
+    "name": "2500 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_2500",
+    "rarity": "legendary"
+  },
+  {
+    "id": "reward_114",
+    "name": "3000 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_3000",
+    "rarity": "legendary"
+  },
+  {
+    "id": "reward_115",
+    "name": "3500 Words Mastered",
+    "type": "badge",
+    "category": "milestone",
+    "unlockRule": "words_mastered_3500",
+    "rarity": "legendary"
+  }
+]

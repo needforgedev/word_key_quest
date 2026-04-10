@@ -1,0 +1,290 @@
+[
+  {
+    "id": "world_1",
+    "index": 0,
+    "name": "The Whispering Meadow",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "none"
+  },
+  {
+    "id": "world_2",
+    "index": 1,
+    "name": "Crystal Caverns",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_1"
+  },
+  {
+    "id": "world_3",
+    "index": 2,
+    "name": "Sunstone Valley",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_2"
+  },
+  {
+    "id": "world_4",
+    "index": 3,
+    "name": "The Echo Cave",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_3"
+  },
+  {
+    "id": "world_5",
+    "index": 4,
+    "name": "Starfall Ridge",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_4"
+  },
+  {
+    "id": "world_6",
+    "index": 5,
+    "name": "Moonlit Marsh",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_5"
+  },
+  {
+    "id": "world_7",
+    "index": 6,
+    "name": "Thornwood Thicket",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_6"
+  },
+  {
+    "id": "world_8",
+    "index": 7,
+    "name": "Driftwood Shores",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_7"
+  },
+  {
+    "id": "world_9",
+    "index": 8,
+    "name": "Ember Peak",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_8"
+  },
+  {
+    "id": "world_10",
+    "index": 9,
+    "name": "The Frozen Quill",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_9"
+  },
+  {
+    "id": "world_11",
+    "index": 10,
+    "name": "Sapphire Lagoon",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_10"
+  },
+  {
+    "id": "world_12",
+    "index": 11,
+    "name": "Windmill Heights",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_11"
+  },
+  {
+    "id": "world_13",
+    "index": 12,
+    "name": "The Iron Library",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_12"
+  },
+  {
+    "id": "world_14",
+    "index": 13,
+    "name": "Coral Reef Kingdom",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_13"
+  },
+  {
+    "id": "world_15",
+    "index": 14,
+    "name": "Sandstorm Citadel",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_14"
+  },
+  {
+    "id": "world_16",
+    "index": 15,
+    "name": "The Verdant Canopy",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_15"
+  },
+  {
+    "id": "world_17",
+    "index": 16,
+    "name": "Obsidian Fortress",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_16"
+  },
+  {
+    "id": "world_18",
+    "index": 17,
+    "name": "Lantern Falls",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_17"
+  },
+  {
+    "id": "world_19",
+    "index": 18,
+    "name": "The Painted Desert",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_18"
+  },
+  {
+    "id": "world_20",
+    "index": 19,
+    "name": "Cloudtop Spire",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_19"
+  },
+  {
+    "id": "world_21",
+    "index": 20,
+    "name": "The Sunken Archive",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_20"
+  },
+  {
+    "id": "world_22",
+    "index": 21,
+    "name": "Blossom Gate",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_21"
+  },
+  {
+    "id": "world_23",
+    "index": 22,
+    "name": "Stormwatch Tower",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_22"
+  },
+  {
+    "id": "world_24",
+    "index": 23,
+    "name": "The Amber Ruins",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_23"
+  },
+  {
+    "id": "world_25",
+    "index": 24,
+    "name": "Frostfire Hollow",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_24"
+  },
+  {
+    "id": "world_26",
+    "index": 25,
+    "name": "The Golden Bazaar",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_25"
+  },
+  {
+    "id": "world_27",
+    "index": 26,
+    "name": "Shadowfern Glade",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_26"
+  },
+  {
+    "id": "world_28",
+    "index": 27,
+    "name": "Skybridge Summit",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_27"
+  },
+  {
+    "id": "world_29",
+    "index": 28,
+    "name": "The Velvet Depths",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_28"
+  },
+  {
+    "id": "world_30",
+    "index": 29,
+    "name": "Dragonfly Isles",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_29"
+  },
+  {
+    "id": "world_31",
+    "index": 30,
+    "name": "The Wandering Path",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_30"
+  },
+  {
+    "id": "world_32",
+    "index": 31,
+    "name": "Prism Peak",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_31"
+  },
+  {
+    "id": "world_33",
+    "index": 32,
+    "name": "The Silent Lighthouse",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_32"
+  },
+  {
+    "id": "world_34",
+    "index": 33,
+    "name": "Evergreen Sanctum",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_33"
+  },
+  {
+    "id": "world_35",
+    "index": 34,
+    "name": "The Final Chapter",
+    "wordCount": 100,
+    "levelCount": 10,
+    "unlockRequirement": "complete_world_34"
+  },
+  {
+    "id": "bonus_vault",
+    "index": 35,
+    "name": "The Bonus Vault",
+    "wordCount": 23,
+    "levelCount": 0,
+    "unlockRequirement": "complete_all_campaign"
+  }
+]
