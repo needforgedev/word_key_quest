@@ -1,31 +1,38 @@
 # Word Key Quest — Execution Plan
 
-## Current State (as of 2026-04-04)
+## Current State (as of 2026-05-15)
+
+App rebranded to **Vocoro**. Version bumped to `0.9.0+1` for beta. Privacy policy drafted in `privacy.md` (hosted on GitHub for store consoles).
 
 ### What's Done
-- [x] Flutter project initialized (Dart SDK ^3.11.0)
-- [x] GoRouter with 21 routes defined
-- [x] AppTheme with color tokens + Google Fonts (Plus Jakarta Sans, Lexend)
+- [x] Flutter project initialized (Dart SDK ^3.11.0), rebranded to Vocoro
+- [x] GoRouter with 21 routes defined (no placeholders in use)
+- [x] AppTheme with 3 full palettes (Sky Heroes, Enchanted Kingdom, Explorer Quest) + Google Fonts (Plus Jakarta Sans, Lexend)
 - [x] Riverpod ProviderScope set up in main.dart
 - [x] All 20 screens built with design-matched UI
 - [x] Full navigation flow wired end-to-end
-- [x] Raw word dataset processed (`barrons_3500_master copy - Sheet1.json`, 3,523 words)
+- [x] Raw word dataset processed (3,523 words)
 - [x] **Phase 1 complete**: Content manifests, domain models (8 classes + wordOrderSeed), SQLite database (8 tables), repository layer (6 repos), content seeder
 - [x] **Phase 2 complete**: Mastery engine (0-5 state machine), spaced repetition scheduler (7 intervals), question engine (4 mini-game generators with 4 choices for Image Match), adaptive difficulty controller, session manager
 - [x] **Phase 3 complete**: 10 Riverpod providers, router with session-aware navigation
 - [x] **Phase 4 complete**: All 20 screens wired to live data — onboarding saves profile, home shows real stats, learn flow teaches real words, mini-games validate real answers with mastery tracking, vault searches/filters real data, settings persist to SharedPreferences
 - [x] **Per-player word randomization**: Each player gets a unique `wordOrderSeed` on profile creation → deterministic shuffle of all 3,500 words → different word order per player, all words covered
 - [x] **UI images**: Temp network URLs replaced with local assets in `assets/images/` (28 UI images)
-- [x] **Word images**: 205 per-word images (w_1 to w_205) mapped in `WordImageHelper` — Worlds 1-2 fully covered, partial World 3
+- [x] **Word images**: **All 3,523 per-word images mapped** in `WordImageHelper` — 100% coverage across all 35 worlds
+- [x] **Audio (TTS)**: `flutter_tts` integrated for word/meaning/memory key speech (offline, uses device engine)
+- [x] **Theme pack switching**: 3 palettes with live switching, themed world names per pack
+- [x] **Privacy policy**: drafted in `privacy.md`, aligned with COPPA / Apple Kids / Google Play Families
+- [x] **Beta version**: bumped to `0.9.0+1` in pubspec.yaml
 
 ### What's NOT Done
-- [ ] Audio system (word pronunciation, feedback sounds)
-- [ ] Word-specific images for Worlds 3-35 (3,295 remaining images from nanoBananaPrompt pipeline)
-- [ ] Theme pack switching beyond base color tokens
-- [ ] Boss challenges (every 5th level gating)
-- [ ] Tests
-- [ ] Analytics hooks
-- [ ] Accessibility polish (dyslexia font toggle wired to actual font, text size scaling)
+- [ ] UI feedback sounds (correct/incorrect dings) — TTS works, but no pre-recorded SFX
+- [ ] Boss challenges (`bossEnabled` flag exists in data; no special UI or 5-level gate)
+- [ ] Tutorial level (3-word warmup before Level 1 per spec §12)
+- [ ] Tests (only 1 smoke test; no unit tests for mastery/SRS/question engine)
+- [ ] Analytics hooks (no event tracking)
+- [ ] Dyslexia font toggle — UI + SharedPreferences key exist, but NOT wired to actual font swap (deferred)
+- [ ] Crash reporting (Sentry/Crashlytics) — deferred
+- [ ] Externalize `word_image_helper.dart` (~3,900 lines of static map) to `assets/data/word_images.json` (maintainability only)
 
 ---
 
@@ -266,20 +273,19 @@
 ## Phase 5: Audio & Assets
 **Goal**: Replace temp URLs with real assets, add audio
 
-### Step 5.1 — Image Assets (Worlds 1-2 Complete) ✅
+### Step 5.1 — Image Assets ✅
 - [x] UI placeholder images downloaded and stored in `assets/images/` (28 images)
 - [x] All `Image.network()` calls replaced with `Image.asset()` across 16 screens
 - [x] pubspec.yaml updated with asset declarations
-- [x] 205 per-word images (w_1 to w_205) copied to `assets/images/words/` — Worlds 1-2 fully covered + 5 of World 3
-- [x] Created `lib/core/word_image_helper.dart` — static map of 205 word IDs → asset paths, `hasImage()`, `getImagePath()`, `allAvailablePaths`, `buildWordImage()` with placeholder fallback
-- [x] **Learn Card**: shows real word image when available, falls back to placeholder
-- [x] **Memory Key Focus**: shows real word image with overlay when available
-- [x] **Image Match**: 2x2 grid with 4 square image choices (no text labels), random fallback from available images for words without images
-- [x] **Word Detail**: hero image uses real word image when available
-- [x] **Word Vault**: thumbnails show real word images for covered words
-- [x] Words outside coverage (w_206+) gracefully fall back to placeholder icon
+- [x] **All 3,523 per-word images** copied to `assets/images/words/` — 100% coverage across all 35 worlds
+- [x] Created `lib/core/word_image_helper.dart` — static map of all 3,523 word IDs → asset paths, `hasImage()`, `getImagePath()`, `allAvailablePaths`, `buildWordImage()` with placeholder fallback
+- [x] **Learn Card**: shows real word image
+- [x] **Memory Key Focus**: shows real word image with overlay
+- [x] **Image Match**: 2x2 grid with 4 square image choices (no text labels)
+- [x] **Word Detail**: hero image uses real word image
+- [x] **Word Vault**: thumbnails show real word images
 - [x] Passes flutter analyze with 0 errors/warnings
-- [ ] Remaining: generate per-word images for Worlds 3-35 (3,295 images)
+- [ ] Future: externalize the 3,523-entry static map to `assets/data/word_images.json` for maintainability (no behavior change)
 
 ### Step 5.2 — Audio System (TTS) ✅
 - [x] Added `flutter_tts` ^4.2.0 to pubspec.yaml (offline, uses device speech engine)
@@ -325,10 +331,36 @@
 - [ ] MVP: local logging or no-op implementation
 
 ### Step 6.5 — Accessibility
-- [ ] Larger text mode toggle
-- [ ] Dyslexia-friendly font toggle (OpenDyslexic)
-- [ ] Voice playback on all learning cards
+- [ ] Larger text mode toggle (UI exists, not wired to TextTheme)
+- [ ] Dyslexia-friendly font toggle (OpenDyslexic) — UI toggle exists but is currently a no-op; deferred to post-beta
+- [x] Voice playback on all learning cards (TTS implemented)
 - [ ] Verify contrast ratios and tap target sizes
+
+---
+
+## Beta Release Checklist (0.9.0+1)
+
+### Done
+- [x] Version bumped to 0.9.0+1
+- [x] `privacy.md` drafted with COPPA / Apple Kids / Google Play Families compliance
+- [x] Privacy contact email: needforge.dev@gmail.com
+- [x] Backup raw JSON files removed from repo root
+- [x] All word images shipped (3,523, 100% coverage)
+- [x] No mock/fake/static data in lib/ (verified: 0 TODOs, 0 prints, 0 network images)
+
+### Required before TestFlight / Play Console submission
+- [ ] Host `privacy.md` at public GitHub URL (raw.githubusercontent or blob URL) and add link to store consoles
+- [ ] Confirm app icons render correctly (`flutter_launcher_icons` configured for all platforms)
+- [ ] Store metadata: screenshots, age rating questionnaire, content rating
+
+### Deferred to post-beta
+- [ ] Wire dyslexia font toggle to actual font (currently no-op)
+- [ ] Crash reporting (Sentry/Crashlytics)
+- [ ] Boss challenges (every 5th level)
+- [ ] Tutorial level
+- [ ] Test coverage
+- [ ] Analytics hooks
+- [ ] UI feedback sounds (correct/incorrect)
 
 ---
 

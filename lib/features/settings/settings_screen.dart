@@ -64,14 +64,16 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                         SizedBox(height: 24),
                         _buildSectionHeader('Reading Help'),
                         SizedBox(height: 12),
-                        _buildToggleRow(
-                          icon: Icons.font_download_rounded,
-                          title: 'Dyslexia Font',
-                          subtitle: 'Special reading style',
-                          value: settings.dyslexiaFont,
-                          onChanged: (v) => ref.read(settingsProvider.notifier).setDyslexiaFont(v),
-                        ),
-                        SizedBox(height: 12),
+                        // Dyslexia Font toggle — hidden until OpenDyslexic font is wired
+                        // into AppTheme. Restore by uncommenting:
+                        // _buildToggleRow(
+                        //   icon: Icons.font_download_rounded,
+                        //   title: 'Dyslexia Font',
+                        //   subtitle: 'Special reading style',
+                        //   value: settings.dyslexiaFont,
+                        //   onChanged: (v) => ref.read(settingsProvider.notifier).setDyslexiaFont(v),
+                        // ),
+                        // SizedBox(height: 12),
                         _buildTextSizeSelector(settings),
                         SizedBox(height: 24),
                         _buildSectionHeader('Appearance'),
