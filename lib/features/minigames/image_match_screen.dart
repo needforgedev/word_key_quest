@@ -5,9 +5,9 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme/theme.dart';
 import '../../application/session_provider.dart';
-import '../../application/service_providers.dart';
 import '../../app/router.dart';
 import '../../core/word_image_helper.dart';
+import '../../data/models/models.dart';
 
 class ImageMatchScreen extends ConsumerStatefulWidget {
   const ImageMatchScreen({super.key});
@@ -49,6 +49,19 @@ class _ImageMatchScreenState extends ConsumerState<ImageMatchScreen> {
   Widget build(BuildContext context) {
     final sessionState = ref.watch(sessionProvider);
     final question = sessionState.currentQuestion;
+
+    // Safety guard: redirect if a non-ImageMatch question landed here.
+    if (question != null &&
+        question.type != QuestionType.imageMatch &&
+        sessionState.isQuizzing) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          context.go(routeForQuestionType(question.type.name));
+        }
+      });
+      return const Scaffold(body: SizedBox.shrink());
+    }
+
     final choices = question?.choices ?? [];
 
     return Scaffold(
@@ -63,7 +76,10 @@ class _ImageMatchScreenState extends ConsumerState<ImageMatchScreen> {
               child: Row(
                 children: [
                   IconButton(
-                    onPressed: () => context.pop(),
+                    onPressed: () {
+                      ref.read(sessionProvider.notifier).abandonSession();
+                      context.go('/home');
+                    },
                     icon: Icon(Icons.arrow_back_rounded,
                         color: AppTheme.onSurface),
                   ),

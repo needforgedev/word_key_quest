@@ -4,7 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme/theme.dart';
 import '../../application/session_provider.dart';
+import '../../application/player_provider.dart';
 import '../../app/router.dart';
+import '../../data/models/models.dart';
 
 class MeaningTapScreen extends ConsumerStatefulWidget {
   const MeaningTapScreen({super.key});
@@ -22,13 +24,25 @@ class _MeaningTapScreenState extends ConsumerState<MeaningTapScreen> {
     Icons.eco_rounded,
   ];
 
-  static const String _hintImageUrl =
-      'assets/images/image_ce362675.jpg';
-
   @override
   Widget build(BuildContext context) {
     final sessionState = ref.watch(sessionProvider);
     final question = sessionState.currentQuestion;
+    final profile = ref.watch(currentProfileProvider);
+
+    // Safety guard: if the current question is for a different mini-game,
+    // redirect to the correct screen so we never render word IDs as text.
+    if (question != null &&
+        question.type != QuestionType.meaningTap &&
+        sessionState.isQuizzing) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          context.go(routeForQuestionType(question.type.name));
+        }
+      });
+      return const Scaffold(body: SizedBox.shrink());
+    }
+
     final choices = question?.choices ?? [];
 
     return Scaffold(
@@ -43,7 +57,10 @@ class _MeaningTapScreenState extends ConsumerState<MeaningTapScreen> {
               child: Row(
                 children: [
                   IconButton(
-                    onPressed: () => context.pop(),
+                    onPressed: () {
+                      ref.read(sessionProvider.notifier).abandonSession();
+                      context.go('/home');
+                    },
                     icon: Icon(Icons.arrow_back_rounded,
                         color: AppTheme.onSurface),
                   ),
@@ -66,7 +83,7 @@ class _MeaningTapScreenState extends ConsumerState<MeaningTapScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
-                      'Level 12',
+                      'Level ${profile?.globalLevel ?? 1}',
                       style: GoogleFonts.lexend(
                         fontSize: 12,
                         fontWeight: FontWeight.w600,
@@ -218,53 +235,9 @@ class _MeaningTapScreenState extends ConsumerState<MeaningTapScreen> {
                 },
               ),
             ),
-            // Bottom nav bar
-            // _buildBottomNavBar(),
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildBottomNavBar() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 12, horizontal: 32),
-      decoration: BoxDecoration(
-        color: AppTheme.surfaceContainerLowest,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.06),
-            blurRadius: 8,
-            offset: Offset(0, -2),
-          ),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _navItem(Icons.home_rounded, 'Home'),
-          _navItem(Icons.map_rounded, 'Map'),
-          _navItem(Icons.emoji_events_rounded, 'Vault'),
-          _navItem(Icons.settings_rounded, 'Settings'),
-        ],
-      ),
-    );
-  }
-
-  Widget _navItem(IconData icon, String label) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icon, color: AppTheme.onSurface.withValues(alpha: 0.5), size: 24),
-        SizedBox(height: 4),
-        Text(
-          label,
-          style: GoogleFonts.lexend(
-            fontSize: 11,
-            color: AppTheme.onSurface.withValues(alpha: 0.5),
-          ),
-        ),
-      ],
     );
   }
 }

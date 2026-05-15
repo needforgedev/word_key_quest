@@ -7,14 +7,40 @@ import '../../application/player_provider.dart';
 import '../../application/session_provider.dart';
 import '../../application/theme_provider.dart';
 
-class LevelIntroScreen extends ConsumerWidget {
+class LevelIntroScreen extends ConsumerStatefulWidget {
   const LevelIntroScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<LevelIntroScreen> createState() => _LevelIntroScreenState();
+}
+
+class _LevelIntroScreenState extends ConsumerState<LevelIntroScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Start the session immediately so the intro can show real word counts.
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      final p = ref.read(currentProfileProvider);
+      if (p == null || !mounted) return;
+      // Abandon any prior session, then start fresh for the current level.
+      ref.read(sessionProvider.notifier).abandonSession();
+      await ref
+          .read(sessionProvider.notifier)
+          .startLevel(p.currentWorld, p.currentLevel);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final profile = ref.watch(currentProfileProvider);
     final levelNum = (profile?.globalLevel ?? 1);
-    final worldName = ref.watch(themedWorldNameProvider(profile?.currentWorld ?? 0));
+    final worldName =
+        ref.watch(themedWorldNameProvider(profile?.currentWorld ?? 0));
+    final sessionState = ref.watch(sessionProvider);
+    final session = sessionState.session;
+    final newWordCount = session?.newWordIds.length;
+    final reviewWordCount = session?.reviewWordIds.length;
+    final sessionReady = session != null;
 
     return Scaffold(
       backgroundColor: AppTheme.surface,
@@ -45,11 +71,15 @@ class LevelIntroScreen extends ConsumerWidget {
                     SizedBox(height: 20),
                     _buildOwlGuide(),
                     SizedBox(height: 32),
-                    _buildMissionBriefSection(context),
+                    _buildMissionBriefSection(
+                      context,
+                      newWordCount: newWordCount,
+                      reviewWordCount: reviewWordCount,
+                    ),
                     SizedBox(height: 24),
                     _buildPotentialRewards(),
                     SizedBox(height: 32),
-                    _buildStartButton(context, ref),
+                    _buildStartButton(context, ref, enabled: sessionReady),
                     SizedBox(height: 32),
                   ],
                 ),
@@ -67,7 +97,8 @@ class LevelIntroScreen extends ConsumerWidget {
       child: Row(
         children: [
           GestureDetector(
-            onTap: () => context.pop(),
+            onTap: () =>
+                context.canPop() ? context.pop() : context.go('/home'),
             child: Container(
               width: 40,
               height: 40,
@@ -189,7 +220,11 @@ class LevelIntroScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildMissionBriefSection(BuildContext context) {
+  Widget _buildMissionBriefSection(
+    BuildContext context, {
+    int? newWordCount,
+    int? reviewWordCount,
+  }) {
     return Container(
       decoration: BoxDecoration(
         color: AppTheme.surfaceContainerLowest,
@@ -215,7 +250,7 @@ class LevelIntroScreen extends ConsumerWidget {
             icon: Icons.auto_awesome_rounded,
             iconColor: AppTheme.primary,
             label: 'New Words',
-            value: '10',
+            value: newWordCount?.toString() ?? '…',
             showChevron: true,
           ),
           Divider(color: AppTheme.surfaceContainerHigh, height: 1, indent: 20, endIndent: 20),
@@ -223,7 +258,7 @@ class LevelIntroScreen extends ConsumerWidget {
             icon: Icons.refresh_rounded,
             iconColor: AppTheme.secondary,
             label: 'Review Words',
-            value: '3',
+            value: reviewWordCount?.toString() ?? '…',
             showChevron: true,
           ),
         ],
@@ -332,35 +367,40 @@ class LevelIntroScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildStartButton(BuildContext context, WidgetRef ref) {
+  Widget _buildStartButton(BuildContext context, WidgetRef ref,
+      {bool enabled = true}) {
     return GestureDetector(
-      onTap: () async {
-        final p = ref.read(currentProfileProvider);
-        if (p == null) return;
-        await ref.read(sessionProvider.notifier).startLevel(p.currentWorld, p.currentLevel);
-        if (context.mounted) context.push('/learn_card');
-      },
+      onTap: enabled
+          ? () {
+              // Session was already started in initState; just navigate.
+              context.push('/learn_card');
+            }
+          : null,
       child: Container(
         width: double.infinity,
         height: 64,
         decoration: BoxDecoration(
-          color: AppTheme.primary,
+          color: enabled ? AppTheme.primary : AppTheme.surfaceContainerHigh,
           borderRadius: BorderRadius.circular(24),
-          boxShadow: [
-            BoxShadow(
-              color: AppTheme.primaryDim,
-              offset: Offset(0, 5),
-              blurRadius: 0,
-            ),
-          ],
+          boxShadow: enabled
+              ? [
+                  BoxShadow(
+                    color: AppTheme.primaryDim,
+                    offset: Offset(0, 5),
+                    blurRadius: 0,
+                  ),
+                ]
+              : null,
         ),
         child: Center(
           child: Text(
-            'START LEVEL',
+            enabled ? 'START LEVEL' : 'Loading…',
             style: GoogleFonts.plusJakartaSans(
               fontSize: 18,
               fontWeight: FontWeight.w800,
-              color: Colors.white,
+              color: enabled
+                  ? Colors.white
+                  : AppTheme.onSurface.withValues(alpha: 0.5),
               letterSpacing: 1.0,
             ),
           ),

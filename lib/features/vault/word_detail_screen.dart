@@ -116,7 +116,8 @@ class WordDetailScreen extends ConsumerWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: () => context.pop(),
+            onPressed: () =>
+                context.canPop() ? context.pop() : context.go('/vault'),
             icon: Icon(
               Icons.arrow_back_rounded,
               color: AppTheme.onSurface,

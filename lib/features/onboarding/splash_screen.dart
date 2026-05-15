@@ -62,7 +62,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     await Future.delayed(const Duration(seconds: 2));
 
     if (mounted) {
-      context.go(hasProfile ? '/home' : '/parent_gate');
+      context.go(hasProfile ? '/home' : '/profile_setup');
     }
   }
 

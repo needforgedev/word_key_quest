@@ -268,6 +268,19 @@ App rebranded to **Vocoro**. Version bumped to `0.9.0+1` for beta. Privacy polic
 - [x] Fixed world map auto-scroll — added `ScrollController` that scrolls to active level on screen open
 - [x] Fixed Image Match showing word IDs as text — now shows only images in 2x2 grid with 4 choices
 
+### Beta Polish — 2026-05-15 ✅
+- [x] **Parent gate bypassed for new users**: splash routes new users straight to `/profile_setup` (was: `/parent_gate`). Parent gate route/screen kept for future Settings gating.
+- [x] **Word Detail back button fixed**: uses `canPop()` with `/vault` fallback so back works whether arrived from vault or directly
+- [x] **Auto-scroll to top between learn cards**: added `ValueKey(word.id)` to `SingleChildScrollView` on `learn_card_screen.dart` and `memory_key_focus_screen.dart` — scroll resets when word changes
+- [x] **All 4 mini-game back buttons fixed**: now call `abandonSession()` + navigate to `/home` instead of broken `context.pop()`
+- [x] **Image Match available at higher levels**: `_validTypesForMastery` in `difficulty_controller.dart` now includes `imageMatch` for mastery 3-5 (was only 0-2)
+- [x] **Type-mismatch safety guard**: each mini-game screen now checks `question.type` on build. If wrong type is loaded (e.g. ImageMatch question landed on `/meaning_tap`), redirects via `routeForQuestionType` — no more word IDs flashing as text before images load
+- [x] **Level Intro shows real session counts**: converted to `ConsumerStatefulWidget`, starts session in `initState`, displays actual `newWordIds.length` / `reviewWordIds.length` from the loaded session (no longer hardcoded "10/3"). START LEVEL button shows "Loading…" disabled state until session is ready, then just navigates (no double-start).
+- [x] **Level Intro back button fixed**: uses `canPop()` with `/home` fallback
+- [x] **Hardcoded UI badges → live data**: `'Level 12'` in `meaning_tap_screen.dart` → `profile.globalLevel`; `'1,240'` star count in `cue_recall_screen.dart` and `sentence_fix_screen.dart` → `profile.stars`
+- [x] **Dead code removed**: unused `_hintImageUrl` field, `_buildBottomNavBar()` + `_navItem()` methods from `meaning_tap_screen.dart`; unused `service_providers.dart` import from `image_match_screen.dart`
+- [x] **Dyslexia font toggle hidden**: commented out in `settings_screen.dart` (UI no-op until OpenDyslexic font is wired into theme) — easy to restore
+
 ---
 
 ## Phase 5: Audio & Assets

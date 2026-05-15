@@ -29,6 +29,7 @@ class MemoryKeyFocusScreen extends ConsumerWidget {
             _buildProgressBar(context),
             Expanded(
               child: SingleChildScrollView(
+                key: ValueKey('mkf_${word?.id ?? ''}'),
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,

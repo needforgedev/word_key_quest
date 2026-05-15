@@ -46,3 +46,4 @@ app.*.map.json
 /.claude
 /claude/
 designs_word_key_quest/
+key.properties

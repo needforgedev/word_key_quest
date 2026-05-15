@@ -4,7 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../app/theme/theme.dart';
 import '../../application/session_provider.dart';
+import '../../application/player_provider.dart';
 import '../../app/router.dart';
+import '../../data/models/models.dart';
 
 class SentenceFixScreen extends ConsumerStatefulWidget {
   const SentenceFixScreen({super.key});
@@ -23,6 +25,20 @@ class _SentenceFixScreenState extends ConsumerState<SentenceFixScreen> {
   Widget build(BuildContext context) {
     final sessionState = ref.watch(sessionProvider);
     final question = sessionState.currentQuestion;
+    final profile = ref.watch(currentProfileProvider);
+
+    // Safety guard: redirect if a non-SentenceFix question landed here.
+    if (question != null &&
+        question.type != QuestionType.sentenceFix &&
+        sessionState.isQuizzing) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          context.go(routeForQuestionType(question.type.name));
+        }
+      });
+      return const Scaffold(body: SizedBox.shrink());
+    }
+
     final choices = question?.choices ?? [];
 
     return Scaffold(
@@ -37,7 +53,10 @@ class _SentenceFixScreenState extends ConsumerState<SentenceFixScreen> {
               child: Row(
                 children: [
                   IconButton(
-                    onPressed: () => context.pop(),
+                    onPressed: () {
+                      ref.read(sessionProvider.notifier).abandonSession();
+                      context.go('/home');
+                    },
                     icon: Icon(Icons.arrow_back_rounded,
                         color: AppTheme.onSurface),
                   ),
@@ -59,7 +78,7 @@ class _SentenceFixScreenState extends ConsumerState<SentenceFixScreen> {
                       color: AppTheme.secondaryContainer, size: 22),
                   SizedBox(width: 4),
                   Text(
-                    '1,240',
+                    '${profile?.stars ?? 0}',
                     style: GoogleFonts.plusJakartaSans(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,

@@ -197,10 +197,18 @@ class DifficultyController {
           QuestionType.cueRecall,
         ];
       case 3:
-        return [QuestionType.cueRecall, QuestionType.sentenceFix];
+        return [
+          QuestionType.imageMatch,
+          QuestionType.cueRecall,
+          QuestionType.sentenceFix,
+        ];
       case 4:
       case 5:
-        return [QuestionType.cueRecall, QuestionType.sentenceFix];
+        return [
+          QuestionType.imageMatch,
+          QuestionType.cueRecall,
+          QuestionType.sentenceFix,
+        ];
       default:
         return QuestionType.values;
     }

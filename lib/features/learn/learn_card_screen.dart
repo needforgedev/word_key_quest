@@ -26,6 +26,7 @@ class LearnCardScreen extends ConsumerWidget {
             _buildTopBar(context),
             Expanded(
               child: SingleChildScrollView(
+                key: ValueKey('learn_${word?.id ?? ''}'),
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
