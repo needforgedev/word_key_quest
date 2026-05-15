@@ -1,4 +1,4 @@
-package com.example.word_key_quest
+package dev.needforge.vocoro
 
 import io.flutter.embedding.android.FlutterActivity
 

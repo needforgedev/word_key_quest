@@ -19,7 +19,7 @@ if (hasReleaseSigning) {
 }
 
 android {
-    namespace = "com.needforge.vocoro"
+    namespace = "dev.needforge.vocoro"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -33,7 +33,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.needforge.vocoro"
+        applicationId = "dev.needforge.vocoro"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
